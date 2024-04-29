@@ -1,0 +1,44 @@
+<div class="card">
+    <div class="card-header">
+        Configurações
+    </div>
+    <div class="card-body">
+        <h4>Ative sua Conta</h4>
+        <div style="margin-top: 25px;">
+            <span style="font-weight: 600;">Primeiro Passo - </span>
+            <span>Cadastre-se na Corretora</span>.
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <button style="margin-top: 10px; margin-bottom: 10px; background-color: #b99541; color: white;"
+                mat-flat-button color="primary" (click)="corretora()">CORRETORA</button>
+        </div>
+
+        <div style="margin-top: 25px;">
+            <span style="font-weight: 600;">Segundo Passo - </span>
+            <span>Faça seu Primeiro depósito</span>.
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <button style="margin-top: 10px; margin-bottom: 10px; background-color: #b99541; color: white;"
+                mat-flat-button color="primary" (click)="corretora()">FAÇA SEU DEPÓSITO</button>
+        </div>
+
+        <div style="margin-top: 25px;">
+            <span style="font-weight: 600;">Terceiro Passo - </span>
+            <span>Insira o Email Utilizado no Cadastro</span>.
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <span class="p-input-icon-left">
+                <input placeholder="Email" type="text" pInputText [(ngModel)]="email" />
+            </span>
+        </div>
+
+        <div style="margin-top: 25px;">
+            <span style="font-weight: 600;">Quarto Passo - </span>
+            <span>Anexe o Comprovante de Depósito Abaixo</span>.
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <p-fileUpload styleClass="custom-button" mode="basic" chooseLabel="Comprovante" accept="image/*"
+                (onUpload)="onUpload($event)"></p-fileUpload>
+        </div>
+    </div>
+</div>

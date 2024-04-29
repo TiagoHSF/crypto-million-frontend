@@ -1,0 +1,42 @@
+<div class="card">
+    <div class="card-header">
+        Indicações de Entrada
+    </div>
+    <div class="card-body">
+        <div *ngIf="!entradaDisponivel" class="box-entrada">
+            <h4 style="font-weight: 600;">Estamos Analisando o Mercado!</h4>
+            <span>Sem Entradas Disponíveis no Momento</span>
+            <span style="font-size: 10px;">Ative as Notificações!</span>
+        </div>
+
+        <div *ngIf="entradaDisponivel" class="box-entrada-disponivel">
+            <h4 style="font-weight: 600;"><i class="ph-fill ph-alarm" style="margin-right: 5px;"></i>Operação Disponível!</h4>
+            <span>Ativo - {{entradaDisponivel.moeda}}</span>
+            <span>Horário - {{entradaDisponivel.hora}}</span>
+            <span>Ordem - {{entradaDisponivel.tipo}} <i style="margin-left: 5px; color: green;"
+                    *ngIf="entradaDisponivel.tipo == 'COMPRA'" class="ph-fill ph-trend-up"></i>
+                <i style="margin-left: 5px; color: red" *ngIf="entradaDisponivel.tipo == 'VENDA'"
+                    class="ph-fill ph-trend-down"></i>
+            </span>
+        </div>
+
+        <div class="div-com-linha"></div>
+
+        <div style="margin-top: 30px;">
+            <h4 style="font-weight: 600;">Últimas Entradas</h4>
+            <ul *ngFor="let operacao of operacoes" style="padding: 10px;">
+                <li>
+                    <span>{{operacao.hora}}</span>
+                    <span style="margin-left: 5px; margin-right: 5px;">{{operacao.moeda}}</span>
+                    <span>{{operacao.tipo}}</span>
+                    <span style="margin-left: 5px; color: green;" *ngIf="operacao.tipo == 'COMPRA'">
+                        <i class="ph-fill ph-trend-up"></i>
+                    </span>
+                    <span style="margin-left: 5px; color: red" *ngIf="operacao.tipo == 'VENDA'">
+                        <i class="ph-fill ph-trend-down"></i>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

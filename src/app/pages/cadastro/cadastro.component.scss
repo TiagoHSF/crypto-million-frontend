@@ -1,0 +1,48 @@
+.base-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Defina a altura para ocupar a altura total da tela */
+}
+
+.card {
+    border-radius: 20px;
+    background-color: rgb(55, 55, 63) !important;
+    width: 90%; /* Reduza a largura para se ajustar melhor a telas menores */
+    max-width: 400px; /* Defina uma largura máxima para evitar que o cartão fique muito largo em telas grandes */
+    text-align: center;
+    padding: 20px; /* Adicione algum espaçamento interno para melhor legibilidade */
+}
+
+img {
+    max-width: 100%; /* Faça a imagem se ajustar ao tamanho do contêiner */
+    margin-bottom: 20px; /* Adicione algum espaço abaixo da imagem */
+}
+
+.base-input {
+    margin-bottom: 20px; /* Adicione espaço abaixo dos campos de entrada */
+}
+
+input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%; /* Faça os campos de entrada ocuparem a largura total do contêiner */
+    padding: 10px; /* Adicione algum preenchimento interno para melhor legibilidade */
+    box-sizing: border-box; /* Garanta que o preenchimento não aumente o tamanho total do campo */
+}
+
+.title {
+    font-size: 25px;
+    color: white;
+    margin-bottom: 20px; /* Adicione espaço abaixo do título */
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column; /* Empilhe os botões verticalmente em telas menores */
+}
+
+.buttons button {
+    margin-bottom: 10px; /* Adicione espaço entre os botões */
+    width: 100%; /* Faça os botões ocuparem a largura total do contêiner */
+}

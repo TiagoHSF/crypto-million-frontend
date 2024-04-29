@@ -1,0 +1,23 @@
+<div class="card">
+    <div class="card-header">
+        Dashboard
+    </div>
+    <div class="card-body">
+        <div class="card-dash">
+            <h4>Operações Hoje</h4>
+            <span>0</span>
+        </div>
+        <div class="card-dash">
+            <h4>Percentual de Ganho</h4>
+            <span>0%</span>
+        </div>
+        <div class="card-dash">
+            <h4>Valor Movimentado</h4>
+            <span>R$ 0,00</span>
+        </div>
+    </div>
+
+    <h4 style="font-weight: 600; padding: 20px;">Moedas</h4>
+    <ngx-charts-number-card [results]="single" [cardColor]="cardColor" (select)="onSelect($event)">
+    </ngx-charts-number-card>
+</div>

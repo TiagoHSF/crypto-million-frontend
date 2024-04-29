@@ -1,0 +1,28 @@
+<div class="w-full base-card">
+    <div class="flex justify-center card">
+        <img src="../../../assets/Agrupar 3.png">
+        <span class="title">CADASTRO</span>
+        <div class="base-input">
+            <span class="p-input-icon-left">
+                <input placeholder="Nome Completo" type="text" pInputText [(ngModel)]="nomeCompleto" />
+                <!-- <i class="pi pi-search"></i> -->
+            </span>
+            <span class="p-input-icon-left">
+                <input placeholder="Email" type="text" pInputText [(ngModel)]="email" />
+                <!-- <i class="pi pi-search"></i> -->
+            </span>
+            <span class="p-input-icon-left">
+                <input placeholder="Senha" type="password" pInputText [(ngModel)]="senha" />
+                <!-- <i class="pi pi-search"></i> -->
+            </span>
+            <span class="p-input-icon-left">
+                <input placeholder="Confirmar Senha" type="password" pInputText [(ngModel)]="confirmarSenha" />
+                <!-- <i class="pi pi-search"></i> -->
+            </span>
+        </div>
+        <div class="buttons">
+            <button style="margin-top: 10px; margin-bottom: 10px; background-color: #b99541; color: white;" mat-flat-button color="primary" (click)="cadastro()">CADASTRAR</button>
+            <button style="margin-top: 10px; margin-bottom: 10px; border-color: #b99541; color: white;" mat-stroked-button color="primary" (click)="login()">VOLTAR PARA LOGIN</button>
+        </div>
+    </div>
+</div>

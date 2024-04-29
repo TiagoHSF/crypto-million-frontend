@@ -1,0 +1,36 @@
+.app-container {
+    display: flex;
+}
+
+app-sidebar {
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+}
+
+.main-content {
+    position: fixed;
+    margin-left: 370px;
+    max-width: 70%;
+    margin-top: 5%;
+}
+
+
+.user {
+    width: 100%;
+    text-align: end;
+    margin-right: 5%;
+    color: white;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    app-sidebar {
+      display: none; /* Esconde o elemento quando a largura da tela for 768 pixels ou menos */
+    }
+    .main-content {
+        width: 100%;
+        margin-left: 5%;
+        max-width: 100%;
+    }
+  }

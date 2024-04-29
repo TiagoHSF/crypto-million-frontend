@@ -1,0 +1,47 @@
+.card {
+    background-color: rgb(35, 35, 41);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    color: white;
+    display: grid;
+}
+
+.card-header {
+    background-color: rgb(62, 62, 70);
+    padding: 12px;
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Adiciona esta propriedade para que os itens possam se envolver quando a tela for estreita */
+}
+
+.card-dash {
+    margin-right: 5px;
+    border-radius: 15px;
+    padding: 20px;
+    display: grid;
+    background-color: #b99541;
+    margin-bottom: 20px; /* Em vez de margin-right, use margin-bottom para adicionar espaço entre os elementos */
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+.card-dash h4 {
+    font-weight: 600;
+    margin-bottom: 10px; /* Adiciona espaço entre o título e o valor */
+}
+
+@media (min-width: 768px) {
+    .card-body {
+        justify-content: space-between; /* Altera o layout para espaço entre os itens quando a largura da tela for 768 pixels ou mais */
+    }
+    
+    .card-dash {
+        margin-right: 20px; /* Restaura a margem direita */
+        margin-bottom: 0; /* Remove a margem inferior */
+    }
+}

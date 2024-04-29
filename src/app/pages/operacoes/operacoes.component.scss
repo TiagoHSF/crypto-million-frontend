@@ -1,0 +1,44 @@
+.card {
+    background-color: rgb(35, 35, 41);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    color: white;
+    display: grid;
+}
+
+.card-header {
+    background-color: rgb(62, 62, 70);
+    padding: 12px;
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Adiciona esta propriedade para que os itens possam se envolver quando a tela for estreita */
+}
+
+.box-entrada,
+.box-entrada-disponivel {
+    display: grid;
+    background-color: rgb(82, 82, 87);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px; /* Em vez de margin-right, use margin-bottom para adicionar espaço entre os elementos */
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+.box-entrada-disponivel {
+    background-color: #b99541; /* Cor do fundo quando a entrada está disponível */
+}
+
+.box-entrada-disponivel h4 {
+    color: white; /* Cor do título quando a entrada está disponível */
+}
+
+.div-com-linha {
+    margin-top: 30px;
+    border-bottom: 1px solid #b99541;
+}
