@@ -5,6 +5,9 @@
     overflow: hidden;
     color: white;
     display: grid;
+    width: 70%;
+    margin: auto;
+    margin-top: 5%;
 }
 
 .card-header {
@@ -14,7 +17,7 @@
 }
 
 .card-body {
-    padding: 20px;
+    padding: 30px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap; /* Adiciona esta propriedade para que os itens possam se envolver quando a tela for estreita */

@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { DividerModule } from 'primeng/divider';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { OperationEndpointService } from '../../services/operation.service';
 
 
 
@@ -20,7 +21,14 @@ export class OperacoesComponent implements OnInit {
 
   entradaDisponivel!: OperacaoDTO;
 
+  constructor(
+    // private readonly operationEndpointService: OperationEndpointService
+    ){
+
+  }
+
   ngOnInit(): void {
+    
     const operacao = {
       moeda: "SHIBA INO",
       tipo: "COMPRA",
@@ -32,5 +40,15 @@ export class OperacoesComponent implements OnInit {
     this.operacoes.push(operacao);
     this.operacoes.push(operacao);
   }
+
+
+  // ngOnInit(): void {
+  //   this.operationEndpointService.findLast()
+  //     .subscribe({
+  //       next: (data) => {
+  //         this.operacoes = data;
+  //       }
+  //     })
+  // }
 
 }

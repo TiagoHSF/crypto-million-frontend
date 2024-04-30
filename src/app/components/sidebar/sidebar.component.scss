@@ -1,37 +1,45 @@
-li {
-  margin-bottom: 20px;
-  font-size: 20px;
-}
+// li {
+//   margin-bottom: 20px;
+//   font-size: 20px;
+// }
 
-/* Adicione esses estilos ao seu arquivo de estilo do componente (sidebar.component.scss) */
+// /* Adicione esses estilos ao seu arquivo de estilo do componente (sidebar.component.scss) */
 
 /* Altera a cor de fundo */
-::ng-deep .p-sidebar {
+::ng-deep .p-menubar {
   background-color: rgb(55, 55, 63) !important;
   margin-left: 20px;
   border-radius: 50px;
-  /* Use !important para garantir que o estilo seja aplicado */
+  color: white;
+  bottom: 5%;
+  position: fixed;
+  width: 100%;
+  justify-content: center;
+  display: grid;
 }
 
 /* Altera a cor do texto */
-::ng-deep .p-sidebar .p-sidebar-content {
+::ng-deep .p-menubar .p-menubar-content {
   color: white !important;
   /* Use !important para garantir que o estilo seja aplicado */
 }
 
-::ng-deep .p-sidebar .p-sidebar-footer {
+::ng-deep .p-menubar .p-menubar-footer {
   color: white !important;
   /* Use !important para garantir que o estilo seja aplicado */
 }
 
-::ng-deep .p-sidebar-mask {
+::ng-deep .p-menubar-mask {
   background-color: transparent !important;
 }
 
-li:hover {
+::ng-deep .sidebar-container p-menubar p-menuitem li:hover {
   background-color: rgb(119, 119, 124);
   border-radius: 20px;
   color: rgb(55, 55, 63) !important;
   font-weight: 600;
 }
+
+
+
 

@@ -1,29 +1,5 @@
-<div>
-    <p-sidebar class="bg-black" [visible]="true">
-        <ng-template pTemplate="header">
-            <img src="../../../assets/Agrupar 3.png">
-        </ng-template>
-        <ng-template pTemplate="content">
-            <ul>
-                <li (click)="navigate('dash')"> 
-                    <i class="ph-fill ph-house"></i> Início
-                </li>
-                <li (click)="navigate('op')">
-                    <i class="ph-fill ph-trend-up"></i> Operações
-                </li>
-                <li>
-                    <i class="ph-fill ph-users-three"></i> Treinamento
-                </li>
-                <li>
-                    <i class="ph-fill ph-currency-dollar"></i> Rentabilidade
-                </li>
-                <li (click)="navigate('config')">
-                    <i class="ph-fill ph-gear-six"></i> Configurações
-                </li>
-            </ul>
-        </ng-template>
-        <ng-template pTemplate="footer">2024 &copy; Crypto Million</ng-template>
-    </p-sidebar>
-    <!-- <p-button (click)="sidebarVisible = true" icon="pi pi-arrow-right"></p-button> -->
 
-</div>
+
+<p-menubar [model]="items" >
+
+</p-menubar>

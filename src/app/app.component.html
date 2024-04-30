@@ -1,13 +1,6 @@
-<div *ngIf="!externo" class="app-container">
+<div *ngIf="!externo">
+    <router-outlet></router-outlet>
     <app-sidebar></app-sidebar>
-    <div class="main-content">
-        <router-outlet></router-outlet>
-    </div>
-    <div id="expansaoSide" style="z-index: 9999999999; color: #b99541" (click)="sidebar()">
-        <i *ngIf="expandir" style="color: #b99541; font-size: 50px;" class="ph-fill ph-caret-circle-right"></i>
-        <i *ngIf="!expandir" style="color: #b99541; font-size: 50px;" class="ph-fill ph-caret-circle-left"></i>
-    </div>
-    <div class="user"><i class="ph-fill ph-user-circle"></i>Olá, Tiago!</div>
 </div>
 
 <app-login *ngIf="externo && login"></app-login>

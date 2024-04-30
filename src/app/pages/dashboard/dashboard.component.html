@@ -16,8 +16,15 @@
             <span>R$ 0,00</span>
         </div>
     </div>
+</div>
 
-    <h4 style="font-weight: 600; padding: 20px;">Moedas</h4>
-    <ngx-charts-number-card [results]="single" [cardColor]="cardColor" (select)="onSelect($event)">
-    </ngx-charts-number-card>
+<div class="card">
+    <div class="card-header">
+        Moedas
+    </div>
+    <div class="card-body">
+        <ngx-charts-number-card [results]="single" [cardColor]="cardColor" (select)="onSelect($event)">
+        </ngx-charts-number-card>
+    </div>
+
 </div>

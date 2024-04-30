@@ -3,6 +3,8 @@ import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
 import { InputTextModule } from 'primeng/inputtext';
+import { UserEndpointService } from '../../services/user.service';
+import { UserDTO } from '../../models/user.model';
 
 @Component({
   selector: 'app-cadastro',
@@ -18,15 +20,28 @@ export class CadastroComponent {
   senha!: string;
   confirmarSenha!: string;
 
-  constructor(private readonly router: Router){
-    
-  }
-
-  cadastro(){
+  constructor(private readonly router: Router,
+    private readonly userEndpointService: UserEndpointService) {
 
   }
 
-  login(){
+  cadastro() {
+    if (this.senha == this.confirmarSenha) {
+      const user = {
+        email: this.email,
+        senha: this.senha,
+        nomeCompleto: this.nomeCompleto
+      } as UserDTO;
+      this.userEndpointService.create(user)
+        .subscribe({
+          next: (data) => {
+            console.log(data)
+          }
+        })
+    }
+  }
+
+  login() {
     this.router.navigateByUrl("/externo/login");
   }
 

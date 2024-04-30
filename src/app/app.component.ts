@@ -6,11 +6,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './pages/login/login.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
+import { HttpClientModule } from '@angular/common/http';
+import { OperacoesComponent } from './pages/operacoes/operacoes.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, SidebarComponent, LoginComponent, CadastroComponent],
+  imports: [CommonModule, RouterOutlet, SidebarComponent, LoginComponent, CadastroComponent, OperacoesComponent, HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
