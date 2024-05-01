@@ -1,6 +1,6 @@
 .card {
     background-color: rgb(35, 35, 41);
-    border-radius: 8px;
+    border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     color: white;
@@ -11,15 +11,17 @@
 }
 
 .card-header {
-    background-color: rgb(62, 62, 70);
-    padding: 12px;
     font-weight: bold;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
 .card-body {
     padding: 30px;
     justify-content: space-around;
-    flex-wrap: wrap; /* Adiciona esta propriedade para que os itens possam se envolver quando a tela for estreita */
+    flex-wrap: wrap;
+    /* Adiciona esta propriedade para que os itens possam se envolver quando a tela for estreita */
 }
 
 .custom-button {
@@ -36,5 +38,6 @@
 }
 
 input[type="text"] {
-    color: black; /* Cor do texto do input */
+    color: black;
+    /* Cor do texto do input */
 }

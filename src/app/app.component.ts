@@ -37,15 +37,19 @@ export class AppComponent implements OnInit {
 
   verificarRota() {
     setInterval(() => {
-      if (this.router.url.includes("login")) {
-        this.login = true;
-        this.cadastro = false;
-      } else if (this.router.url.includes("cadastro")) {
-        this.cadastro = true;
-        this.login = false;
+      if(this.router.url != "/"){
+        if (this.router.url.includes("login")) {
+          this.login = true;
+          this.cadastro = false;
+        } else if (this.router.url.includes("cadastro")) {
+          this.cadastro = true;
+          this.login = false;
+        } else {
+          this.cadastro = false;
+          this.login = false
+        }
       } else {
-        this.cadastro = false;
-        this.login = false
+        this.router.navigateByUrl("/login");
       }
     }, 100)
   }
