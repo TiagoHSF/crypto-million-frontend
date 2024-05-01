@@ -9,16 +9,17 @@
         <div class="step">
             <span style="font-weight: 600;">1° Passo - </span>
             <span>Cadastre-se na Corretora</span>
-            <button style="background-color: #b99541" mat-flat-button color="primary" (click)="corretora()">CORRETORA</button>
+            <button *ngIf="!contaCriada" style="background-color: #b99541" mat-flat-button color="primary" (click)="criarConta()">CORRETORA</button>
+            <span style="color: green; font-weight: 600;" *ngIf="contaCriada">CONTA CRIADA NA CORRETORA!</span>
         </div>
 
-        <div class="step">
+        <div class="step" *ngIf="contaCriada">
             <span style="font-weight: 600;">2° Passo - </span>
             <span>Faça seu Primeiro depósito</span>
-            <button style="background-color: #b99541" mat-flat-button color="primary" (click)="corretora()">FAÇA SEU DEPÓSITO</button>
+            <button style="background-color: #b99541" mat-flat-button color="primary" (click)="deposito()">FAÇA SEU DEPÓSITO</button>
         </div>
 
-        <div class="step">
+        <div class="step" *ngIf="contaCriada">
             <span style="font-weight: 600;">3° Passo - </span>
             <span>Insira o Email Utilizado no Cadastro e Anexe o Comprovante</span>
             <div class="input-container">

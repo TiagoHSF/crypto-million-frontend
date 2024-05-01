@@ -53,4 +53,13 @@
   }
 }
 
+::ng-deep .p-menuitem-text {
+  color: white
+}
+
+::ng-deep .p-menuitem-link:hover {
+  background-color: #b99541;
+  font-weight: 600;
+}
+
 

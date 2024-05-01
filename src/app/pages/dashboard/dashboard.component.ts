@@ -1,15 +1,56 @@
 import { Component } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { MenubarModule } from 'primeng/menubar';
+import { MenuModule } from 'primeng/menu';
+import { CommonModule } from '@angular/common';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [NgxChartsModule],
+  imports: [CommonModule, NgxChartsModule, MenuModule, ButtonModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
 })
 export class DashboardComponent {
+
+  labelButton = 'HOJE';
+
+  items = [
+    {
+      items: [
+        {
+          label: 'HOJE',
+          icon: 'pi pi-refresh',
+          command: () => {
+            this.alterarData('HOJE');
+          }
+        },
+        {
+          label: 'ONTEM',
+          icon: 'pi pi-times',
+          command: () => {
+            this.alterarData('ONTEM');
+          }
+        },
+        {
+          label: 'ÚLTIMOS 7 DIAS',
+          icon: 'pi pi-times',
+          command: () => {
+            this.alterarData('7 DIAS');
+          }
+        },
+        {
+          label: 'ÚLTIMOS 30 DIAS',
+          icon: 'pi pi-times',
+          command: () => {
+            this.alterarData('30 DIAS');
+          }
+        }
+      ]
+    },
+  ];
 
   single: any[] = [
     {
@@ -47,8 +88,25 @@ export class DashboardComponent {
   constructor() {
   }
 
-  onSelect($event: any){
+  onSelect($event: any) {
 
+  }
+
+  alterarData(data: string) {
+    switch (data) {
+      case "HOJE":
+        this.labelButton = 'HOJE';
+        break;
+      case "ONTEM":
+        this.labelButton = 'ONTEM';
+        break;
+      case "7 DIAS":
+        this.labelButton = '7 DIAS';
+        break;
+      case "30 DIAS":
+        this.labelButton = '30 DIAS'
+        break;
+    }
   }
 
 }

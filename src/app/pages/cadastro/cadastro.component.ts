@@ -5,11 +5,13 @@ import { Router } from '@angular/router';
 import { InputTextModule } from 'primeng/inputtext';
 import { UserEndpointService } from '../../services/user.service';
 import { UserDTO } from '../../models/user.model';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-cadastro',
   standalone: true,
-  imports: [InputTextModule, FormsModule, MatButtonModule],
+  imports: [CommonModule, InputTextModule, FormsModule, MatButtonModule],
   templateUrl: './cadastro.component.html',
   styleUrl: './cadastro.component.scss'
 })

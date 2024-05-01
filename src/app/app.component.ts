@@ -12,7 +12,7 @@ import { OperacoesComponent } from './pages/operacoes/operacoes.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, SidebarComponent, LoginComponent, CadastroComponent, OperacoesComponent, HttpClientModule],
+  imports: [CommonModule, RouterOutlet, SidebarComponent, LoginComponent, CadastroComponent, OperacoesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

@@ -47,3 +47,8 @@
         margin-bottom: 0; /* Remove a margem inferior */
     }
 }
+
+::ng-deep .p-menu-overlay {
+    background-color: rgb(55, 55, 63);
+
+}
