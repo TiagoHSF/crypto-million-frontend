@@ -22,28 +22,28 @@ export class DashboardComponent {
       items: [
         {
           label: 'HOJE',
-          icon: 'pi pi-refresh',
+          icon: 'ph-fill ph-calendar-x"',
           command: () => {
             this.alterarData('HOJE');
           }
         },
         {
           label: 'ONTEM',
-          icon: 'pi pi-times',
+          icon: 'ph-fill ph-calendar-x"',
           command: () => {
             this.alterarData('ONTEM');
           }
         },
         {
           label: 'ÚLTIMOS 7 DIAS',
-          icon: 'pi pi-times',
+          icon: 'ph-fill ph-calendar-x"',
           command: () => {
             this.alterarData('7 DIAS');
           }
         },
         {
           label: 'ÚLTIMOS 30 DIAS',
-          icon: 'pi pi-times',
+          icon: 'ph-fill ph-calendar-x"',
           command: () => {
             this.alterarData('30 DIAS');
           }
