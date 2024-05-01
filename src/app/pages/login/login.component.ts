@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
   }
 
   cadastro() {
-    this.router.navigateByUrl("/externo/cadastro")
+    this.router.navigateByUrl("/cadastro")
       .then(() => {
         this.changeDetector.detectChanges();
       })

@@ -1,7 +1,7 @@
-<div *ngIf="!externo">
+<div *ngIf="!login && !cadastro">
     <router-outlet></router-outlet>
     <app-sidebar></app-sidebar>
 </div>
 
-<app-login *ngIf="externo && login"></app-login>
-<app-cadastro *ngIf="externo && cadastro"></app-cadastro>
+<app-login *ngIf="login"></app-login>
+<app-cadastro *ngIf="cadastro"></app-cadastro>

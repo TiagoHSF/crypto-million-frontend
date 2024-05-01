@@ -21,7 +21,8 @@ export class CadastroComponent {
   confirmarSenha!: string;
 
   constructor(private readonly router: Router,
-    private readonly userEndpointService: UserEndpointService) {
+    // private readonly userEndpointService: UserEndpointService
+    ) {
 
   }
 
@@ -32,17 +33,17 @@ export class CadastroComponent {
         senha: this.senha,
         nomeCompleto: this.nomeCompleto
       } as UserDTO;
-      this.userEndpointService.create(user)
-        .subscribe({
-          next: (data) => {
-            console.log(data)
-          }
-        })
+      // this.userEndpointService.create(user)
+      //   .subscribe({
+      //     next: (data) => {
+      //       console.log(data)
+      //     }
+      //   })
     }
   }
 
   login() {
-    this.router.navigateByUrl("/externo/login");
+    this.router.navigateByUrl("/login");
   }
 
 }
