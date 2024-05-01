@@ -1,17 +1,6 @@
 /* Adicione esses estilos ao seu arquivo de estilo do componente (sidebar.component.scss) */
 
 /* Estilo para telas menores */
-@media (max-width: 768px) {
-  ::ng-deep .p-menubar .p-menubar-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  ::ng-deep .p-menubar .p-menuitem .p-menuitem-text {
-    display: none;
-  }
-}
 
 /* Estilos para telas maiores */
 ::ng-deep .p-menubar {
@@ -44,3 +33,24 @@
   color: rgb(55, 55, 63) !important;
   font-weight: 600;
 }
+
+
+@media (max-width: 768px) {
+  ::ng-deep p-menubarsub {
+    position: absolute;
+    z-index: 1002;
+    margin-bottom: 140%;
+    width: 100%;
+  }
+  
+  ::ng-deep .p-menubar-root-list {
+    background-color: rgb(55, 55, 63);
+  
+  }
+  
+  ::ng-deep .p-menuitem-text {
+    color: white
+  }
+}
+
+
