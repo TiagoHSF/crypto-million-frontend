@@ -4,37 +4,30 @@
     </div>
     <div class="card-body">
         <h4>Ative sua Conta</h4>
-        <div style="margin-top: 25px;">
+        
+        <!-- Passos -->
+        <div class="step">
             <span style="font-weight: 600;">1° Passo - </span>
-            <span>Cadastre-se na Corretora</span>.
-        </div>
-        <div style="display: flex; justify-content: center;">
-            <button style="margin-top: 10px; margin-bottom: 10px; background-color: #b99541; color: white;"
-                mat-flat-button color="primary" (click)="corretora()">CORRETORA</button>
+            <span>Cadastre-se na Corretora</span>
+            <button style="background-color: #b99541" mat-flat-button color="primary" (click)="corretora()">CORRETORA</button>
         </div>
 
-        <div style="margin-top: 25px;">
+        <div class="step">
             <span style="font-weight: 600;">2° Passo - </span>
-            <span>Faça seu Primeiro depósito</span>.
-        </div>
-        <div style="display: flex; justify-content: center;">
-            <button style="margin-top: 10px; margin-bottom: 10px; background-color: #b99541; color: white;"
-                mat-flat-button color="primary" (click)="corretora()">FAÇA SEU DEPÓSITO</button>
+            <span>Faça seu Primeiro depósito</span>
+            <button style="background-color: #b99541" mat-flat-button color="primary" (click)="corretora()">FAÇA SEU DEPÓSITO</button>
         </div>
 
-        <div style="margin-top: 25px;">
+        <div class="step">
             <span style="font-weight: 600;">3° Passo - </span>
-            <span>Insira o Email Utilizado no Cadastro e Anexe o Comprovante</span>.
+            <span>Insira o Email Utilizado no Cadastro e Anexe o Comprovante</span>
+            <div class="input-container">
+                <span class="p-input-icon-left">
+                    <input placeholder="Email" type="text" pInputText [(ngModel)]="email" />
+                </span>
+                <p-fileUpload styleClass="custom-button" mode="basic" chooseLabel="Comprovante" accept="image/*"
+                    (onUpload)="onUpload($event)"></p-fileUpload>
+            </div>
         </div>
-        <div style="display: grid; justify-content: center;">
-            <span class="p-input-icon-left" style="margin-top: 10px;">
-                <input placeholder="Email" type="text" pInputText [(ngModel)]="email" />
-            </span>
-
-            <p-fileUpload styleClass="custom-button" mode="basic" chooseLabel="Comprovante" accept="image/*"
-                (onUpload)="onUpload($event)"></p-fileUpload>
-
-        </div>
-
     </div>
 </div>

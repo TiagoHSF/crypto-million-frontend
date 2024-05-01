@@ -1,32 +1,37 @@
-// li {
-//   margin-bottom: 20px;
-//   font-size: 20px;
-// }
+/* Adicione esses estilos ao seu arquivo de estilo do componente (sidebar.component.scss) */
 
-// /* Adicione esses estilos ao seu arquivo de estilo do componente (sidebar.component.scss) */
-
-/* Altera a cor de fundo */
-::ng-deep .p-menubar {
-  background-color: rgb(55, 55, 63) !important;
-  margin-left: 20px;
-  border-radius: 50px;
-  color: white;
-  bottom: 5%;
-  position: fixed;
-  width: 100%;
-  justify-content: center;
-  display: grid;
+/* Estilo para telas menores */
+@media (max-width: 768px) {
+  ::ng-deep .p-menubar .p-menubar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  ::ng-deep .p-menubar .p-menuitem .p-menuitem-text {
+    display: none;
+  }
 }
 
-/* Altera a cor do texto */
+/* Estilos para telas maiores */
+::ng-deep .p-menubar {
+  background-color: rgb(55, 55, 63);
+  border-radius: 0;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  padding: 10px 0;
+}
+
 ::ng-deep .p-menubar .p-menubar-content {
   color: white !important;
-  /* Use !important para garantir que o estilo seja aplicado */
 }
 
 ::ng-deep .p-menubar .p-menubar-footer {
   color: white !important;
-  /* Use !important para garantir que o estilo seja aplicado */
 }
 
 ::ng-deep .p-menubar-mask {
@@ -39,7 +44,3 @@
   color: rgb(55, 55, 63) !important;
   font-weight: 600;
 }
-
-
-
-

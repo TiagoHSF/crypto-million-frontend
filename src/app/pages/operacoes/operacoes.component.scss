@@ -7,7 +7,7 @@
     display: grid;
     width: 70%;
     margin: auto;
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 .card-header {
@@ -18,7 +18,7 @@
 }
 
 .card-body {
-    padding: 30px;
+    padding: 15px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap; /* Adiciona esta propriedade para que os itens possam se envolver quando a tela for estreita */

@@ -4,10 +4,9 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     color: white;
-    display: grid;
-    width: 70%;
+    width: 90%; /* Ajuste a largura para se adaptar a telas menores */
     margin: auto;
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 .card-header {
@@ -18,10 +17,16 @@
 }
 
 .card-body {
-    padding: 30px;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    /* Adiciona esta propriedade para que os itens possam se envolver quando a tela for estreita */
+    padding: 20px; /* Reduz o preenchimento para economizar espaço */
+}
+
+.step {
+    margin-bottom: 20px; /* Adiciona espaço entre os passos */
+}
+
+.step span {
+    display: block; /* Coloca cada parte do passo em uma linha */
+    margin-bottom: 10px; /* Adiciona espaço entre as partes do passo */
 }
 
 .custom-button {
@@ -29,15 +34,23 @@
     margin-bottom: 10px;
     background-color: #b99541;
     color: white;
+    width: 100%; /* Ocupa toda a largura disponível */
 }
 
 .input-container {
-    margin-top: 25px;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Empilha o input e o botão verticalmente */
+    align-items: stretch; /* Estica os itens para ocupar toda a largura */
+    margin-top: 15px; /* Adiciona espaço entre os passos */
 }
 
 input[type="text"] {
     color: black;
     /* Cor do texto do input */
+}
+
+h4 {
+    font-weight: bold;
+    color: red;
+    margin-bottom: 20px;
 }

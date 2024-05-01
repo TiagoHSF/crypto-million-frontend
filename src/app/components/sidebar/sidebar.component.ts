@@ -50,7 +50,7 @@ export class SidebarComponent implements OnInit {
   sidebarVisible: boolean = true;
 
   constructor(
-    private readonly router: Router
+    private readonly router: Router,
   ) {
 
   }
