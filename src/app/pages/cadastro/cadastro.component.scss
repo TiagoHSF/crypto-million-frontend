@@ -20,13 +20,15 @@ img {
 }
 
 .base-input {
-    margin-bottom: 20px; /* Adicione espaço abaixo dos campos de entrada */
+    display: flex; /* Altere o layout para flex */
+    flex-direction: column; /* Empilhe os inputs verticalmente */
+    margin-bottom: 20px; /* Adicione espaço abaixo dos inputs */
 }
 
-input {
+.base-input input {
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 100%; /* Faça os campos de entrada ocuparem a largura total do contêiner */
+    width: calc(100% - 20px); /* Faça os inputs ocuparem a largura total menos a margem */
     padding: 10px; /* Adicione algum preenchimento interno para melhor legibilidade */
     box-sizing: border-box; /* Garanta que o preenchimento não aumente o tamanho total do campo */
 }
