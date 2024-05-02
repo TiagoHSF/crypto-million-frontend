@@ -4,7 +4,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     color: white;
-    width: 90%; /* Ajuste a largura para se adaptar a telas menores */
+    width: 90%;
     margin: auto;
     margin-top: 3%;
 }
@@ -17,16 +17,16 @@
 }
 
 .card-body {
-    padding: 20px; /* Reduz o preenchimento para economizar espaço */
+    padding: 20px;
 }
 
 .step {
-    margin-bottom: 20px; /* Adiciona espaço entre os passos */
+    margin-bottom: 20px;
 }
 
 .step span {
-    display: block; /* Coloca cada parte do passo em uma linha */
-    margin-bottom: 10px; /* Adiciona espaço entre as partes do passo */
+    display: block;
+    margin-bottom: 10px;
 }
 
 .custom-button {
@@ -34,23 +34,26 @@
     margin-bottom: 10px;
     background-color: #b99541;
     color: white;
-    width: 100%; /* Ocupa toda a largura disponível */
 }
 
 .input-container {
     display: flex;
-    flex-direction: column; /* Empilha o input e o botão verticalmente */
-    align-items: stretch; /* Estica os itens para ocupar toda a largura */
-    margin-top: 15px; /* Adiciona espaço entre os passos */
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 15px;
 }
 
 input[type="text"] {
     color: black;
-    /* Cor do texto do input */
 }
 
 h4 {
     font-weight: bold;
     color: red;
     margin-bottom: 20px;
+}
+
+::ng-deep .mat-stepper-vertical {
+    background-color: rgb(228 228 235) !important;
+    border-radius: 20px;
 }

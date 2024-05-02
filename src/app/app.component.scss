@@ -1,7 +1,7 @@
-.user {
-    display: flex;
-    justify-content: end;
-}
+// .user {
+//     display: flex;
+//     justify-content: end;
+// }
 
 span {
     color: white;
@@ -19,9 +19,37 @@ span {
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
+    img {
+        width: 50% !important;
+    }
     span {
         font-size: 16px; /* Ajuste o tamanho do texto para telas menores */
         width: auto; /* Permite que o contêiner do texto se ajuste ao tamanho do texto */
         padding: 5px 10px; /* Reduz o espaço em torno do texto */
     }
 }
+
+.container {
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    width: 20%;
+    height: auto;
+    top: 10px;
+    left: 10px;
+
+}
+
+.username {
+    top: 10px;
+    right: 10px;
+}
+

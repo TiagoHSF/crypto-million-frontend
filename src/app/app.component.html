@@ -1,10 +1,12 @@
-<div *ngIf="!login && !cadastro">
-    <div class="user">
-        <span>Olá, Luiz!</span>
+<div *ngIf="!login && !cadastro" class="container">
+    <div class="header">
+        <img src="../../../assets/Agrupar 3.png" class="logo">
+        <span class="username">Olá, Luiz!</span>
     </div>
     <router-outlet></router-outlet>
     <app-sidebar></app-sidebar>
 </div>
+
 
 <app-login *ngIf="login"></app-login>
 <app-cadastro *ngIf="cadastro"></app-cadastro>

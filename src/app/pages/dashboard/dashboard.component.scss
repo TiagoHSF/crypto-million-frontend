@@ -1,54 +1,118 @@
+// .card {
+//     background-color: rgb(35, 35, 41);
+//     border-radius: 20px;
+//     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+//     overflow: hidden;
+//     color: white;
+//     display: grid;
+//     width: 70%;
+//     margin: auto;
+//     margin-top: 3%;}
+
+// .card-header {
+//     font-weight: bold;
+//     font-size: 20px;
+//     margin-left: 20px;
+//     margin-top: 20px;
+// }
+
+// .card-body {
+//     padding: 30px;
+//     display: flex;
+//     flex-wrap: wrap; /* Adiciona esta propriedade para que os itens possam se envolver quando a tela for estreita */
+// }
+
+// .card-dash {
+//     margin-right: 5px;
+//     border-radius: 15px;
+//     padding: 20px;
+//     display: grid;
+//     background-color: #b99541;
+//     margin-bottom: 20px; /* Em vez de margin-right, use margin-bottom para adicionar espaço entre os elementos */
+//     text-align: center; /* Centraliza o texto horizontalmente */
+// }
+
+// .card-dash h4 {
+//     font-weight: 600;
+//     margin-bottom: 10px; /* Adiciona espaço entre o título e o valor */
+// }
+
+// @media (min-width: 768px) {
+//     .card-body {
+//         justify-content: space-between; /* Altera o layout para espaço entre os itens quando a largura da tela for 768 pixels ou mais */
+//     }
+    
+//     .card-dash {
+//         margin-right: 20px; /* Restaura a margem direita */
+//         margin-bottom: 0; /* Remove a margem inferior */
+//     }
+// }
+
+// ::ng-deep .p-menu-overlay {
+//     background-color: rgb(55, 55, 63);
+
+// }
+
 .card {
     background-color: rgb(35, 35, 41);
     border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     color: white;
-    display: grid;
     width: 70%;
     margin: auto;
-    margin-top: 3%;}
+    margin-top: 3%;
+}
 
 .card-header {
     font-weight: bold;
     font-size: 20px;
     margin-left: 20px;
     margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px; /* Adiciona espaço à direita para o botão */
 }
 
 .card-body {
     padding: 30px;
     display: flex;
-    flex-wrap: wrap; /* Adiciona esta propriedade para que os itens possam se envolver quando a tela for estreita */
+    flex-wrap: wrap;
+    justify-content: space-between; /* Garante espaço entre os elementos */
 }
 
 .card-dash {
-    margin-right: 5px;
+    flex: 1 1 45%; /* Define a largura dos elementos na linha */
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #b99541;
     border-radius: 15px;
     padding: 20px;
-    display: grid;
-    background-color: #b99541;
-    margin-bottom: 20px; /* Em vez de margin-right, use margin-bottom para adicionar espaço entre os elementos */
-    text-align: center; /* Centraliza o texto horizontalmente */
 }
 
 .card-dash h4 {
     font-weight: 600;
-    margin-bottom: 10px; /* Adiciona espaço entre o título e o valor */
+    margin-bottom: 10px;
 }
 
-@media (min-width: 768px) {
-    .card-body {
-        justify-content: space-between; /* Altera o layout para espaço entre os itens quando a largura da tela for 768 pixels ou mais */
-    }
-    
-    .card-dash {
-        margin-right: 20px; /* Restaura a margem direita */
-        margin-bottom: 0; /* Remove a margem inferior */
-    }
+.menu-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-right {
+    right: 20px; /* Posiciona o menu à direita */
 }
 
 ::ng-deep .p-menu-overlay {
     background-color: rgb(55, 55, 63);
 
 }
+
+::ng-deep .p-submenu-header {
+    display: none;
+}
+

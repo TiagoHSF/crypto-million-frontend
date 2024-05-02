@@ -1,5 +1,4 @@
 <div style="margin-left: 15%; display: grid">
-    <img src="../../../assets/Agrupar 3.png">
     <span style="color: white;
     font-weight: 600;
     font-size: 30px;
@@ -11,8 +10,8 @@
     <div class="card-header">
         ASSERTIVIDADE DO DIA
         <!-- <p-toast></p-toast> -->
-        <p-menu #menu [model]="items" [popup]="true"></p-menu>
-        <button pButton type="button" (click)="menu.toggle($event)" icon="pi pi-bars" [label]="labelButton"></button>
+        <p-menu #menu [model]="items" [popup]="true" class="menu-right"></p-menu>
+        <button pButton type="button" (click)="menu.toggle($event)" icon="pi pi-bars" [label]="labelButton" class="menu-button"></button>
     </div>
     <div class="card-body">
         <div class="card-dash">

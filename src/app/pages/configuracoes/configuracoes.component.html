@@ -4,24 +4,79 @@
     </div>
     <div class="card-body">
         <h4>Ative sua Conta</h4>
-        
+
+        <mat-stepper orientation="vertical" [linear]="true" #stepper>
+            <mat-step>
+                <ng-template matStepLabel>
+                    <span><b>1° Passo - </b> Cadastre-se na Corretora</span>
+                </ng-template>
+                <button style="background-color: #b99541" mat-flat-button color="primary"
+                    (click)="criarConta()">CORRETORA</button>
+                <div>
+                    <button mat-button matStepperNext>Próximo</button>
+                </div>
+
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>
+                    <span><b>2° Passo -</b> Faça seu Primeiro depósito</span>
+                </ng-template>
+
+                <button style="background-color: #b99541" mat-flat-button color="primary" (click)="deposito()">FAÇA SEU
+                    DEPÓSITO</button>
+
+                <div>
+                    <button mat-button matStepperPrevious>Voltar</button>
+                    <button mat-button matStepperNext>Próximo</button>
+                </div>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>
+                    <span><b>3° Passo -</b> Insira o Email Utilizado no Cadastro e Anexe o Comprovante</span>
+                </ng-template>
+
+                <div class="input-container">
+                    <span class="p-input-icon-left">
+                        <input placeholder="Email" type="text" pInputText [(ngModel)]="email" />
+                    </span>
+                    <p-fileUpload styleClass="custom-button" mode="basic" chooseLabel="Comprovante" accept="image/*"
+                        (onUpload)="onUpload($event)"></p-fileUpload>
+                </div>
+
+                <div>
+                    <button mat-button matStepperPrevious>Voltar</button>
+                    <button mat-button matStepperNext>Completar</button>
+                </div>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>Finalizado
+                    <p>Uma administrador revisará seus dados!</p>
+                    <span>Uma notificação será enviada quando sua conta for ativa!</span>
+                </ng-template>
+                <div>
+                    <button mat-button matStepperPrevious>Voltar</button>
+                    <button mat-button (click)="completar()">Reset</button>
+                </div>
+            </mat-step>
+        </mat-stepper>
+
         <!-- Passos -->
-        <div class="step">
-            <span style="font-weight: 600;">1° Passo - </span>
-            <span>Cadastre-se na Corretora</span>
-            <button *ngIf="!contaCriada" style="background-color: #b99541" mat-flat-button color="primary" (click)="criarConta()">CORRETORA</button>
+        <!-- <div class="step">
+            <span><b>1° Passo - </b> Cadastre-se na Corretora</span>
+            <button *ngIf="!contaCriada" style="background-color: #b99541" mat-flat-button color="primary"
+                (click)="criarConta()">CORRETORA</button>
             <span style="color: green; font-weight: 600;" *ngIf="contaCriada">CONTA CRIADA NA CORRETORA!</span>
         </div>
 
         <div class="step" *ngIf="contaCriada">
-            <span style="font-weight: 600;">2° Passo - </span>
-            <span>Faça seu Primeiro depósito</span>
-            <button style="background-color: #b99541" mat-flat-button color="primary" (click)="deposito()">FAÇA SEU DEPÓSITO</button>
+            <span><b>2° Passo -</b> Faça seu Primeiro depósito</span>
+            <button *ngIf="!primeiroDeposito" style="background-color: #b99541" mat-flat-button color="primary"
+                (click)="deposito()">FAÇA SEU DEPÓSITO</button>
+            <span style="color: green; font-weight: 600;" *ngIf="primeiroDeposito">DEPÓSITO REALIZADO!</span>
         </div>
 
-        <div class="step" *ngIf="contaCriada">
-            <span style="font-weight: 600;">3° Passo - </span>
-            <span>Insira o Email Utilizado no Cadastro e Anexe o Comprovante</span>
+        <div class="step" *ngIf="primeiroDeposito">
+            <span><b>3° Passo -</b> Insira o Email Utilizado no Cadastro e Anexe o Comprovante</span>
             <div class="input-container">
                 <span class="p-input-icon-left">
                     <input placeholder="Email" type="text" pInputText [(ngModel)]="email" />
@@ -29,6 +84,6 @@
                 <p-fileUpload styleClass="custom-button" mode="basic" chooseLabel="Comprovante" accept="image/*"
                     (onUpload)="onUpload($event)"></p-fileUpload>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
